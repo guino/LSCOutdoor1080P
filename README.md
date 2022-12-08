@@ -100,6 +100,14 @@ Before you start you will need binwalk for this to work -- it is available for d
 
 NOTE: I don't believe I'm allowed to host files from the manufacturer without their perimission so that is why you have to download and extract them yourself. Feel free to drop me a line if you need some help with the process.
 
+#### Telnet notes
+
+Telnet is on by default on port 24 (`telnet IP 24`) using the process above -- there will NOT be a password. If you wish to disable telnet you can comment out (or remove) the line `telnetd -p 24 -l /bin/sh` in custom.sh. The reason why we're using a passwordless telnet is to prevent writing to the flash memory on every boot. I have also provided two scripts that allow you to turn tenlet on/off regardless of what you use by default (user/password is what's configured in httpd.conf):
+```
+http://user:password@ip:8080/cgi-bin/telneton.cgi
+http://user:password@ip:8080/cgi-bin/telneton.cgi
+```
+
 #### Final note
 
 If you'd like more details about the whole process or have any issues, open an issue in github and we can discuss it further!
