@@ -1,7 +1,6 @@
 #!/bin/sh
 echo -e "Content-type: text/plain\r"
 echo -e "\r"
-SERIAL=123456789
 DAYS=90
 YEAR=$(date +%Y)
 /tmp/sd/busybox find /tmp/sd/DCIM/ -type d -mtime +$DAYS -exec echo rm -rf {} \; -exec rm -rf {} \;
