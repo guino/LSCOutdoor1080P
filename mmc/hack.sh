@@ -25,8 +25,11 @@ touch /tmp/wifi_is_8188
 # If we have a patched application, use it
 if [ -e /tmp/sd/anyka_ipc_rtsp ]; then
  echo "export LD_LIBRARY_PATH=/lib:/usr/lib:/tmp/sd" > /tmp/anyka_ipc_rtsp
+ echo "echo 'tilt_total_steps = 2200' >> /tmp/_ht_hw_settings.ini" >> /tmp/anyka_ipc_rtsp
  echo "/tmp/sd/anyka_ipc_rtsp 2>&1 | /tmp/sd/log_parser.sh /dev/null" >> /tmp/anyka_ipc_rtsp
  chmod +x /tmp/anyka_ipc_rtsp
+ cp /usr/local/_ht_hw_settings.ini /tmp/
+ mount --bind /tmp/_ht_hw_settings.ini /etc/config/_ht_hw_settings.ini
  mount --bind /tmp/anyka_ipc_rtsp /usr/bin/anyka_ipc
 fi
 
