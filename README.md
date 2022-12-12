@@ -85,11 +85,17 @@ This option is simple:
 15. Insert SD card to device and power it on
 16. Wait for it to boot - it may take a little longer than usual due to the wifi setup stuff. Wait for it to show online in the phone app (which should work normally) then you should be able to view the RTSP feed on `rtsp://ip/main_ch`.
 
-##### Option 2 -- If you're not on 2.10.36
+##### Option 2 -- If you're not on 2.10.36 and are willing/able to update
 
-If you're on an older version and can update to 2.10.36, that would be the quickest way to get everything working. If for some reason you can't or don't want to update to 2.10.36 you can follow the steps below to extract the required files.
+If you're on an older version and can update to 2.10.36, that would be the quickest way to get everything working.
 
-Before you start you will need binwalk for this to work -- it is available for download in most linux distributions and there's an article on how to run it in windows [here](https://blog.eldernode.com/install-and-use-binwalk-on-windows/).
+**OPTION FOR OUTDOOR CAMERA ONLY** -- If you WANT to update to 2.10.36 but the update isn't being offered to you, you have the option to download the 2.10.36 update file from tuya servers on this [link](https://fireware.tuyaeu.com:1443/smart/firmware/upgrade/ay1541668973821t35pE/165966791961ed11009a7.bin) then, simply copy the .bin file to the root of the SD card and boot the device -- the light will blink 2 seconds on and 2 seconds off while updating the device and it will reboot when done (BEWARE not to power it off while updating which will take a few minutes). This is **NOT** recommended for the rotating camera since they haven're released 2.10.36 for it and it works just fine on 2.10.28 (default firmware) using option 3 below.
+
+##### Option 3 -- If you're not on 2.10.36
+
+If for some reason you can't or don't want to update to 2.10.36 (i.e. ROTATING CAMERA) you can follow the steps below to extract the required files.
+
+Before you start you will need `binwalk` for this to work -- it is available in most linux distributions and there's an article on how to run binwalk in windows [here](https://blog.eldernode.com/install-and-use-binwalk-on-windows/).
 
 1. Follow steps 1 thru 6 from Option 1 above.
 2. Download the 2.10.36 update file from tuya servers on this [link](https://fireware.tuyaeu.com:1443/smart/firmware/upgrade/ay1541668973821t35pE/165966791961ed11009a7.bin).
@@ -98,7 +104,9 @@ Before you start you will need binwalk for this to work -- it is available for d
 5. Locate the libavssdkbeta.so file under `_165966791961ed11009a7.bin.extracted/_usr.sqsh4.extracted/squashfs-root/lib/libavssdkbeta.so` -- copy it to the root of the SD card.
 6. Follow steps 7 thru 16 from Option 1 above.
 
-NOTE: I don't believe I'm allowed to host files from the manufacturer without their perimission so that is why you have to download and extract them yourself. Feel free to drop me a line if you need some help with the process.
+NOTE: I don't believe I'm allowed to host files from the manufacturer without their permission so that is why you have to download and extract them yourself. Feel free to drop me a line if you need some help with the process.
+
+NOTE2: The update .bin file is actually a .tar file with 1024 bytes added to the end with a few pieces of information -- in theory you could untar the file and mount the squasfs file system extracted to obtain the files above but binwalk does everything for you, so that's why I suggest using it.
 
 #### Telnet notes
 
