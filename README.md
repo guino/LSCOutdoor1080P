@@ -94,6 +94,7 @@ If you're on an older version and can update to 2.10.36, that would be the quick
 ##### Option 3 -- If you're not on 2.10.36
 
 If for some reason you can't or don't want to update to 2.10.36 (i.e. ROTATING CAMERA) you can follow the steps below to extract the required files.
+**KNOWN LIMITATION**: the oudoor camera with firmware 2.10.22 running 2.10.36 application fails to display the HD stream in the mobile app, but SD works along with RTSP in HD.
 
 Before you start you will need `binwalk` for this to work -- it is available in most linux distributions and there's an article on how to run binwalk in windows [here](https://blog.eldernode.com/install-and-use-binwalk-on-windows/).
 
