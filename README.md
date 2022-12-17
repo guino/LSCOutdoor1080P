@@ -126,8 +126,12 @@ You can send direct commands from other applications to control the motors with 
 ```
 http://user:password@ip:8080/cgi-bin/motor.cgi?dir=X&dist=N
 ```
-The `dir` parameter defines direction of the motion and should be either `up`, `down`, `left` or `right`
+The `dir` parameter defines direction of the motion and should be either `up`, `down`, `left` or `right`.
+
 The `dist` parameter defines how much to move, should be a value between 1 and probably 50 (I recommend 10).
+
+Example: `http://user:password@ip:8080/cgi-bin/motor.cgi?dir=right&dist=10`
+
 I put together rather quickly and did not do a lot of testing so try it out and feel free to review the source (motor.c)
 
 #### Final note
