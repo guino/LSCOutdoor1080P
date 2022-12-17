@@ -22,5 +22,7 @@ else
 fi
 
 if [ "$PID" != "" ] && [ "$DIR" != "" ]; then
+ # Pause motion detection for 3 seconds
+ echo -en '\xB8\x0B\x00\x00' | dd of=/proc/$PID/mem bs=1 count=4 seek=$((0x4313c8))
  /tmp/sd/motor $PID $ADDR 40046d40 $VAL $DIST 2>/dev/null
 fi
