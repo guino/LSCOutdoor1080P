@@ -1,0 +1,59 @@
+<html>
+<body>
+<style>
+  .hide { position:absolute; top:-1px; left:-1px; width:1px; height:1px; }
+</style>
+
+<iframe name="hiddenFrame" class="hide"></iframe>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax"><center>
+<form action="/cgi-bin/motor.cgi" method="get" target="hiddenFrame">
+    <input type="hidden" name="dist" value="10">
+    <button type="submit" value="up" name="dir">Up</button>
+</form>
+    </center></th>
+    <th class="tg-0lax"></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">
+<form action="/cgi-bin/motor.cgi" method="get" target="hiddenFrame">
+    <input type="hidden" name="dist" value="10">
+    <button type="submit" value="left" name="dir">Left</button>
+</form>
+    </td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">
+<form action="/cgi-bin/motor.cgi" method="get" target="hiddenFrame">
+    <input type="hidden" name="dist" value="10">
+    <button type="submit" value="right" name="dir">Right</button>
+</form>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">
+<form action="/cgi-bin/motor.cgi" method="get" target="hiddenFrame">
+    <input type="hidden" name="dist" value="10">
+    <button type="submit" value="down" name="dir">Down</button>
+</form>
+    </td>
+    <td class="tg-0lax"></td>
+  </tr>
+</tbody>
+</table>
+</body>
+</html>
