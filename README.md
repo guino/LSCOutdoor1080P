@@ -134,6 +134,12 @@ Example: `http://user:password@ip:8080/cgi-bin/motor.cgi?dir=right&dist=10`
 
 I put together rather quickly and did not do a lot of testing so try it out and feel free to review the source (motor.c)
 
+#### Offline mode
+In `custom.sh` uncomment the line calling for `offline.sh` (leave the condition in front!)
+It has been reported to break the application.
+
+Other choice for advances users: Block directly the firewall (and kill existing states!) *once* the camera is started (camera doesn't start without internet because of time configuration. Looks like it is not standard NTP protocol).
+
 #### Final note
 
 If you'd like more details about the whole process or have any issues, open an issue in github and we can discuss it further!

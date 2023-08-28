@@ -11,3 +11,8 @@ if [ ! -e /tmp/cleanup`date +%Y%m%d` ]; then
  touch /tmp/cleanup`date +%Y%m%d`
  /tmp/sd/cgi-bin/cleanup.cgi > /tmp/cleanup.log
 fi
+
+
+## if offline.sh is not running, run it
+#[[ ! `pgrep -f offline.sh` ]] && /tmp/sd/offline.sh &
+
