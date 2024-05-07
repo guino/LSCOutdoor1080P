@@ -12,8 +12,8 @@ I created this repo to catalog information related to the LSC 1080P outdoor and 
 
 This is what the devices looks like (Other brand devices may look similar with the same hardware/software in them):
 
-![Outdoor](https://user-images.githubusercontent.com/8442196/192149609-a1c3d70a-bea6-484f-955d-09eca376161f.png)
-![Rotating](https://camo.githubusercontent.com/a26262eba0bc5b682dad1c2be2cf5f191dc3e96e2a138e6928e0530bb5bac07d/68747470733a2f2f7777772e616374696f6e2e636f6d2f5f6e6578742f696d6167652f3f75726c3d6874747073253341253246253246616374696f6e2e636f6d253246686f73746564617373657473253246434d5341727469636c65496d6167657325324637342532463237253246333030373332355f383731323837393135313231302d3131315f30335f32303232303832333132343933392e706e6726773d36343026713d3735)
+![Outdoor](https://github.com/guino/LSCOutdoor1080P/blob/main/1080outdoor.png?raw=true)
+![Rotating](https://github.com/guino/LSCOutdoor1080P/blob/main/1080ptz.jpg?raw=true)
 
 #### Initial work and Credits
 
